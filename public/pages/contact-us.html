@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Subic Getaway | Contact Us</title>
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+
+  <body>
+    
+    <header class="web-header">
+      
+      <div class="mobile-view">
+        <a class="headerLogo" href="../index.html"><img src="../images/logo.png" alt="Website Logo" /></a>
+        
+        <button class="menu" onclick="navBar()" type="button"><img class="menuIcon" src="../images/menuBtn.svg" alt="Menu" /></button> 
+      </div>
+      <nav class="headerNav" aria-label="Website Navigation Buttons">
+        <ul>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="hotels-res.html">Hotels & Restaurants</a></li>
+          <li><a href="attr.html">Attractions</a></li>
+          <li><a href="news-events.html">News & Events</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      
+    </header>
+
+    <main>
+      
+      <!-- HERO CAROUSEL -->
+      <section class="heroImg" aria-label="Featured Images">
+        <img class="hero" src="../slides/1.jpg" alt="Featured Image" />
+        <div class="ftBtns">
+          <button id="backBtn" onclick="prevImg()" class="heroBtn" type="button"><img src="../images/arrow_back.svg" alt="previous" /></button>
+          <button id="forwardBtn" onclick="nextImg()" class="heroBtn" type="button"><img src="../images/arrow_forward.svg" alt="next" /></button>
+        </div>
+      </section>
+      
+      <!-- MAIN CONTENT -->
+      <section class="body-section">
+
+       <!--CONTACT US FORM-->
+        <section class="main-content">
+          <section class="contact_us" aria-label="Contact Us Form">
+          
+          <!-- Content Header-->
+          <header>
+            <h1>Contact Us</h1>
+            <p>Planning on that perfect getaway? Allow us to help you with it and save yourself a lot of time and effort usually spent associated with planning a trip. Just fill in the form below.</p>
+            </header>
+            
+            <!-- Content Form -->
+            <form class="contactForm" action="POST" method="post" accept-charset="utf-8">
+              
+              <div>
+                <label for="name">Your Name</label>
+                <input type="text" name="name" id="name" placeholder="Your Name" required/>
+                <label for="currLocation">Your Location</label>
+                <input type="text" name="currLocation" id="currLocation" placeholder="Your Location" required/>
+                  
+                <label for="desLocation">Desired Destination</label>
+                <input type="text" name="desLocation" id="desLocation" placeholder="Desired Destination"required/>
+                
+                <label for="arrival">Date of Arrival</label>
+                <input type="date" name="arrivalDate" id="arrival" required/>
+                  
+                <label for="departure">Date of Return</label>
+                <input type="date" name="returnDate" id="departure" required/>
+                <fieldset class="noOfPersons" aria-label="Number of Persons">
+                  <legend>Number of Persons:</legend>
+                  
+                  <label for="adults" class="sr-only">Adults</label>
+                  <input required type="number" id="adults" name="adults" placeholder="Adults" min="1">
+                            
+                  <label for="children" class="sr-only">Children</label>
+                  
+                  <input type="number" id="children" name="children" placeholder="Children" min="0">
+                </fieldset>
+              </div>
+              
+              
+              <div>
+                
+                <fieldset class="prefAct">
+                  <legend>Preferred Activities</legend>
+                  
+                  <div class="acts" aria-label="Preferred Activity Checkbox">
+                    <label class="act" for="swimming">
+                      <input id="swimming" type="checkbox" name="swimming" value="Swimming" />
+                      <span>Swimming</span>
+                    </label>
+                    <label class="act" for="surfing">
+                      <input id="surfing" type="checkbox" name="surfing" value="Surfing" />
+                      <span>Surfing</span>
+                    </label>
+                    <label class="act" for="kayaking">
+                      <input id="kayaking" type="checkbox" name="kayaking" value="kayaking" />
+                      <span>Kayaking</span>
+                    </label>
+                    <label class="act" for="diving">
+                      <input id="diving" type="checkbox" name="diving" value="Diving" />
+                      <span>Diving</span>
+                    </label>
+                  </div>
+                  
+                  <div class="otherActivities" aria-label="Manually type your desired activity">
+                    <label for="otherAct">Other</label>
+                    <input type="text" name="otherAct" id="otherAct"/>
+                  </div>
+                  
+                </fieldset>
+                
+                <label for="phoneNo">Telephone</label>
+                <input type="number" name="phoneNo" id="phoneNo" placeholder="Telephone"/>
+                
+                <label for="email">Email Address</label>
+                <input required type="email" name="email" id="email" placeholder="Email Address"/> 
+                
+                <label for="prefContact">Preferred Form of Contact</label>
+              
+                <select required name="prefContact" id="prefContact">
+                  <option value="Email Address" selected>Email Address</option>
+                  <option value="Telephone">Telephone</option>
+                </select>
+                
+                <label for="notes">Additional Notes:</label>
+                <input type="text" name="notes" id="notes" placeholder="Additional notes, instructions or requests (optional)"/>  
+              </div>
+          
+              
+              <button class="submitBtn" type="submit">Submit</button>
+            </form>
+         </section>
+        </section>
+
+        <aside class="sidebar">
+          <!-- ADS -->
+          <section class="advertisements" aria-label="Advertisements">
+            <div class="advert" role="banner"><img src="../images/ad1.jpg" alt="Ads #1"></div>
+            <div class="advert" role="banner"><img src="../images/ad2.jpg" alt="Ads #2"></div>
+            <div class="advert" role="banner"><img src="../images/ad3.jpg" alt="Ads #3"></div>
+          </section>
+        </aside>
+      </section>
+
+    </main>
+    
+  <!--:::::::::FOOTER AREA BELOW:::::::::::::::-->
+
+    <footer>
+      
+      <!-- FOOTER NAVIGATION -->
+      <section class="footerNav" aria-label="Footer navigation">
+          <ul>
+            <li><a href="../pages/about-us.html">About Us</a></li>
+            <li><a href="../pages/hotels-res.html">Hotels & Restaurants</a></li>
+            <li><a href="../pages/attr.html">Attractions</a></li>
+            <li><a href="../pages/news-events.html">News & Events</a></li>
+            <li><a href="../pages/contact-us.html">Contact Us</a></li>
+        </ul>
+      </section>
+      
+      <!-- WEBSITE COMPANY INFORMATION -->
+      <section class="footer-bottom">
+        <div class="company-info">
+          <p>&copy; 2023 COMTEQ Computer & Business College</p>
+            <address>
+              <a href="mailto:customer_service@subicgetaway.com" class="email-link">customer_service@subicgetaway.com</a><br>
+              <a href="tel:+639112345123" class="phone-link">(+63) 911 234 5123 / 252 - 3335</a>
+            </address>
+          </div>
+        </section>
+        
+        <!-- WEBSITE SOCIAL MEDIA LINKS -->     
+        <section class="social-media">
+          <h3>FOLLOW US</h3>
+          <ul class="social-links">
+            <li><a href="#" aria-label="Facebook"><img src="../images/facebook.svg" alt="facebook" /><span>Facebook</span></a></li>
+            <li><a href="#" aria-label="Twitter"><img src="../images/twitter.svg" alt="twitter" /><span>Twitter</span></a></li>
+            <li><a href="#" aria-label="Instagram"><img src="../images/instagram.svg" alt="instagram" /><span>Instagram</span></a></li>
+            <li><a href="#" aria-label="LinkedIn"><img src="../images/linkedin.svg" alt="linkedin" /><span>LinkedIn</span></a></li>
+          </ul>
+        </section>
+
+        <section class="disclaimer">
+          <p>
+            The website design, layout, images, and content displayed on this site are for demonstration and portfolio purposes only. 
+            All names, characters, businesses, places, events, and incidents featured in this template are completely fictitious. Any resemblance to actual persons (living or dead), existing businesses, or real-world events is purely coincidental.
+            No real products or services are offered for sale, and any contact information (such as phone numbers, email addresses, or physical locations) is strictly placeholder data used to illustrate the visual layout.</p>
+        </section>
+    </footer>
+
+    <script src="../js/app.js"></script>
+  </body>
+</html>

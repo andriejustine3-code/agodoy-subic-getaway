@@ -1,0 +1,188 @@
+NAME: Andrie Justine Godoy
+PROGRAM & YEAR: BSIT - 3
+COURSE: WMS101 - Web and Mobile System Technologies
+NOTE: This project was made with the help of AI assistance 
+
+EXCHANGE 1: 
+Aligning Texts and Checkboxes in the Contact Form
+
+PROMPT:
+How to align these checkboxes with their texts?
+
+AI Response:
+<div class="activities">
+  <label class="activity">
+    <span>Swimming</span>
+    <input type="checkbox">
+  </label>
+  <label class="activity">
+    <span>Surfing</span>
+    <input type="checkbox">
+  </label>
+  <label class="activity">
+    <span>Kayaking</span>
+    <input type="checkbox">
+  </label>
+  <label class="activity">
+    <span>Diving</span>
+    <input type="checkbox">
+  </label>
+</div>
+
+.activities {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.activity {
+  display: flex;
+  justify-content: space-between; /* pushes text left, box right */
+  align-items: center; /* vertically centered */
+  padding: 10px 12px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.activity input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #1e293b; /* makes it dark to match your submit button */
+}
+
+EXCHANGE 2: 
+Applying a backdrop filter everytime the nav opens on mobile.
+
+PROMPT:
+how to apply backdrop filter using js
+
+AI Response:
+const box = document.querySelector(".card");
+
+box.style.backdropFilter = "blur(10px)";
+box.style.webkitBackdropFilter = "blur(10px)"; // for Safari
+
+EXCHANGE 3:
+Putting a style to the 2nd DIV Element in a Section
+
+PROMPT:
+What if I want to adjust the 2nd div inside a class, without putting a separate class name to it
+
+AI Response:
+.my-container div:nth-of-type(2) {
+    background-color: lightblue;
+    padding: 20px;
+}
+
+EXCHANGE 4:
+Overlapping the body section to hero image, to create a layered UI look.
+
+PROMPT:
+How do I overlap this body section to the hero image? like, I want the rounded corners of the body section be on top of the hero image
+
+AI Response:
+.hero-section {
+    width: 100%;
+    position: relative;
+    z-index: 1; /* Keeps the hero in the background */
+}
+
+.hero-section img {
+    width: 100%;
+    display: block;
+}
+
+.body-section {
+    position: relative; /* Required so z-index works */
+    z-index: 2;         /* Places this section ON TOP of the hero image */
+    margin-top: -40px;  /* Pulls the body section up to overlap the hero image */
+    
+    /* Your rounded corners */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    
+    /* Background color is crucial so the hero image doesn't show through the text */
+    background-color: #f7f5f0; 
+    padding: 24px;
+}
+
+EXCHANGE 5:
+Fixing a logic bug
+
+PROMPT:
+what's wrong:
+
+function prevImg(){
+  let int = 1;
+  let ctn = math.min(0, (int-1));
+  heroImage.src = $("../slides/{ctn}.jpg");
+}
+
+function nextImg(){
+  let int = 1;
+  let ctn = math.min(4, (int+1));
+  heroImage.src = $("../slides/{ctn}.jpg");
+}
+
+AI Response:
+Almost every line has a bug:
+function prevImg(){ 
+  let int = 1; // resets to 1 every click, so never goes back
+  let ctn = math.min(0, (int-1)); // 1. math -> Math  2. should be Math.max for min limit
+  heroImage.src = $("../slides/{ctn}.jpg"); // 3. wrong string syntax
+}
+*Fixes:*
+
+1.  `math.min` -> `Math.min` capital M
+2.  For prev you want `Math.max`, not `min`. You want to stop at 0:
+    `Math.max(0, int-1)` 
+    For next you want `Math.min` to stop at 4:
+    `Math.min(4, int+1)` — that part you had right
+3.  String is wrong. It's not `$()` and `{}`. It's backticks + `${}`
+    `"../slides/${ctn}.jpg"` -> `` `../slides/${ctn}.jpg` ``
+4.  `let int = 1` inside function = resets every time. Put it outside.
+
+Fixed:
+let int = 1;
+const heroImage = document.querySelector('.heroImage');
+
+function prevImg(){
+  int = Math.max(0, int - 1);
+  heroImage.src = `../slides/${int}.jpg`;
+}
+
+function nextImg(){
+  int = Math.min(4, int + 1);
+  heroImage.src = `../slides/${int}.jpg`;
+}
+That will cycle 0-4 without going out of bounds.
+
+EXCHANGE 6:
+Styling checkboxes
+
+PROMPT:
+How to put check, after I removed the appearance of a checkbox, and also, how does scroll-behavior values work differently
+
+AI Response:
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  /* Inserts a white checkmark icon */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3E%3Cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+}
