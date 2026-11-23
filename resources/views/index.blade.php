@@ -40,11 +40,11 @@
       <!-- FOOTER NAVIGATION -->
       <section class="footerNav" aria-label="Footer navigation">
           <ul>
-            <li><a href="pages/about-us.html">About Us</a></li>
-            <li><a href="pages/hotels-res.html">Hotels & Restaurants</a></li>
-            <li><a href="pages/attr.html">Attractions</a></li>
-            <li><a href="pages/news-events.html">News & Events</a></li>
-            <li><a href="pages/contact-us.html">Contact Us</a></li>
+            <li><a href="{{ url('/about') }}">About Us</a></li>
+            <li><a href="{{ url('/hotels-and-restaurants') }}">Hotels & Restaurants</a></li>
+            <li><a href="{{ url('/attractions') }}">Attractions</a></li>
+            <li><a href="{{ url('/news-and-events') }}">News & Events</a></li>
+            <li><a href="{{ url('/contact-us') }}">Contact Us</a></li>
         </ul>
       </section>
       

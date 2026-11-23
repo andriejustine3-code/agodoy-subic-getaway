@@ -33,7 +33,7 @@
   
               <!-- SEE MORE BUTTON -->
               <button href="https://youtube.com" type="button" class="read-more">
-                <a href="#">Read More</a>
+                <a href="/">Read More</a>
               </button> 
             </div>
             <!-- CONTENT BODY -->
@@ -60,7 +60,7 @@
   
               <!-- SEE MORE BUTTON -->
               <button class="read-more">
-                <a href="#">Read More</a>
+                <a href="/">Read More</a>
               </button> 
             </div>
             <!-- CONTENT BODY -->
@@ -70,7 +70,7 @@
 
           <!-- MORE ARTICLES -->
           <button class="read-more" aria-label="More Articles">
-            <a href="#">Read More Articles...</a>
+            <a href="/">Read More Articles...</a>
           </button>
 
           <!-- TESTIMONIALS -->
@@ -107,7 +107,7 @@
 
           <!-- MORE TESTIMONIALS -->
               <button class="read-more" aria-label="More Testimonials">
-                <a href="#">Read More Testimonials ...</a>
+                <a href="/">Read More Testimonials ...</a>
               </button>
 
           </section>
