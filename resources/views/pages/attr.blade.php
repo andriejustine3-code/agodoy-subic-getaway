@@ -1,0 +1,167 @@
+@extends('index')
+
+@section('content')
+    <section class="heroImg" aria-label="Featured Images">
+        <img class="hero" src="../slides/1.jpg" alt="Featured Image" />
+        <div class="ftBtns">
+          <button id="backBtn" onclick="prevImg()" class="heroBtn" type="button"><img src="../images/arrow_back.svg" alt="previous" /></button>
+          <button id="forwardBtn" onclick="nextImg()" class="heroBtn" type="button"><img src="../images/arrow_forward.svg" alt="next" /></button>
+        </div>
+      </section>
+      
+      <!-- MAIN CONTENT -->
+      <section class="body-section">
+
+        <!--ATTRACTIONS-->
+      <section class="main-content">
+        <h1 id="page-title">Attractions in Subic</h1>
+    
+        <!-- Attraction #1 -->
+        <article class="articleCard">
+            
+            <!-- Thumbnail Area -->
+            <div class="media-column">
+              <img src="../images/lighthouse.jpg" alt="View of Attraction 1 in Subic" class="attract-thumb">
+              <button class="read-more" aria-label="Read More"><a>Read More</a></button>
+            </div>
+            
+            <!-- Text Area -->
+            <div class="content-column">
+              <h2>Zoobic Safari</h2>
+              <p>Spanning a massive 25-hectare jungle expanse, it is recognized as 
+                the first and only tiger safari in the Philippines. Rather than a conventional, 
+                walk-by zoo layout, it offers a "backyard-style" adventure focused on highly intense, 
+                up-close interactions with apex predators.</p>
+                <h3>Signature Attractions</h3>
+                <ul>
+                  <li><span class="hgh">The Tiger Safari:</span>  The park's main crown jewel. 
+                    You board a heavily reinforced, fully enclosed cage-style safari jeepney that drives directly 
+                    through a free-roaming tiger habitat. Tour guides use raw chicken to 
+                    entice massive 400-pound Bengal tigers to leap directly onto the vehicle right above your head.
+                  </li>
+                  <li>
+                    <span class="hgh">Croco Loco:</span>  A thrilling suspension bridge walk directly over a 
+                    large pit populated by hundreds of snapping crocodiles. 
+                    You can purchase chicken chunks to lower down and watch them feed from right below your feet.
+                  </li>
+                  <li><span class="hgh">Serpentarium & Close Encounters:</span>
+                     Indoor viewing zones displaying exotic reptiles, snakes, and a dedicated corridor where you can view full-grown lions from a safe, close distance.
+                  </li>
+                </ul>
+          </div>
+        </article>
+        
+        <!-- Attraction #2 -->
+        <article class="articleCard">
+            
+            <!-- Thumbnail Area -->
+            <div class="media-column">
+              <img src="../images/yacht.jpg" alt="View of Attraction 2 in Subic" class="attract-thumb">
+              <button class="read-more" aria-label="Read More"><a>Read More</a></button>
+            </div>
+            
+            <!-- Text Area -->
+            <div class="content-column">
+              <h2>Ocean Adventure</h2>
+              <p>
+                Right next door to Camayan Beach Resort, Ocean Adventure offers a completely different kind of animal experience compared to Zoobic Safari. Recognized as Southeast Asia's first open-water marine theme park, it features a natural lagoon setting that opens directly into the ocean waters of Subic Bay, meaning the dolphins and sea lions reside in their genuine marine habitat rather than indoor glass tanks.
+              </p>
+                <h3>Signature Feature Presentations</h3>
+                <ul>
+                  <li><span class="hgh">Dolphin Friends:</span>  
+                    Hosted at Encounter Cove, this   signature presentation features agile and intelligent bottlenose and spinner dolphins demonstrating natural water behaviors, high leaps, and speed runs.
+                  </li>
+                  <li>
+                    <span class="hgh">Sea Lion Marine Patrol:</span>
+                    An incredibly popular, light-hearted show at the Sea Lion Cinema where South American sea lions show off their clever skills while teaching kids and adults about recycling and ocean plastic conservation.
+                  </li>
+                  <li><span class="hgh">Wild World:</span>
+                      Shifting away from the ocean, this eco-theater show highlights rescued jungle wildlife—including large pythons, raptors, and native Palawan bearcats—focusing on forest protection.
+                  </li>
+                </ul>
+          </div>
+        </article>
+        
+        <!-- Attraction #3 -->
+        <article class="articleCard">
+            
+            <!-- Thumbnail Area -->
+            <div class="media-column">
+              <img src="../images/subicBeach.jpg" alt="View of Attraction 1 in Subic" class="attract-thumb">
+              <button class="read-more" aria-label="Read More"><a>Read More</a></button>
+            </div>
+            
+            <!-- Text Area -->
+            <div class="content-column">
+              <h2>Inflatable Island</h2>
+              <p>
+                Inflatable Island Beach Club is the exact opposite of the quiet nature vibe at Camayan Beach. Located just outside the freeport zone along the Olongapo - Bugallon Road in Lower Kalaklan, it covers roughly 4,200 square meters, making it Asia's largest floating water park playground
+              </p>
+                <h3>Signature Floating Playground</h3>
+                <ul>
+                  <li><span class="hgh">The Obstacles:</span>  
+                     It features giant inflatable slides, climbing towers, balance bridges, water trampolines, human launchers, and swings.
+                  </li>
+                  <li>
+                    <span class="hgh">The Unicorn Island:</span>
+                    A highly popular, pastel-colored section of the course dedicated entirely to massive inflatable unicorns and rainbow tracks.
+                  </li>
+                  <li><span class="hgh">Safety Rules:</span>
+                       Life vests are strictly mandatory for all guests on the water, and the entire course is actively monitored by a team of lifeguards. Guests must attend a brief safety orientation 30 minutes before their scheduled water time.
+                  </li>
+                </ul>
+          </div>
+        </article>
+      </section>
+        
+        <!-- SIDEBAR -->  
+        <aside class="sidebar">
+          <!-- BOOKING FORM -->
+          <section class="reqBooking" aria-label="Request Booking">
+            <!-- FORM HEADER -->
+            <h2>REQUEST BOOKING</h2>
+            
+            <!-- FORM BODY-->
+            <form>
+              <label for="name">Your Name</label>
+              <input id="name" type="text">
+
+              <label for="destination">Your Destination</label>
+              <input id="destination" type="text">
+
+              <label for="arrival">Date of Arrival</label>
+              <input id="arrival" type="date">
+
+              <label for="departure">Date of Departure</label>
+              <input id="departure" type="date">
+              
+              <!-- Grouped Nested Form -->
+              <fieldset>
+                <legend>No. of Persons:</legend>
+                <label for="adults" class="sr-only">Adults</label>
+                <input type="number" id="adults" name="adults" placeholder="Adults" min="1">
+                          
+                <label for="children" class="sr-only">Children</label>
+                <input type="number" id="children" name="children" placeholder="Children" min="0">
+              </fieldset>
+                
+              <!-- Dropdown Menu/Choices -->
+              <label for="prefContact">Preferred Contact</label>
+              <select name="prefContact" id="prefContact">
+                <option value="" disabled selected>Preferred Contact</option>
+                <option value="online">Email</option>
+                <option value="in-person">Phone Number</option>
+              </select>
+              <button class="submitBtn" type="submit"><a>Submit</a></button>
+            </form>
+          </section>
+  
+          <!-- ADS -->
+          <section class="advertisements" aria-label="Advertisements">
+            <div class="advert" role="banner"><img src="../images/ad1.jpg" alt="Ads #1"></div>
+            <div class="advert" role="banner"><img src="../images/ad2.jpg" alt="Ads #2"></div>
+            <div class="advert" role="banner"><img src="../images/ad3.jpg" alt="Ads #3"></div>
+          </section>
+        </aside> 
+      </section>
+@endsection

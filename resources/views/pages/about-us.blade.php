@@ -1,0 +1,124 @@
+@extends('index')
+
+@section('content')
+    <!-- HERO CAROUSEL -->
+    <section class="heroImg" aria-label="Featured Images">
+    <img class="hero" src="../slides/1.jpg" alt="Featured Image" />
+    <div class="ftBtns">
+        <button id="backBtn" onclick="prevImg()" class="heroBtn" type="button"><img src="../images/arrow_back.svg" alt="previous"/></button>
+        <button id="forwardBtn" onclick="nextImg()" class="heroBtn" type="button"><img src="../images/arrow_forward.svg" alt="next"/></button>
+    </div>
+    </section>
+    
+    <section class="body-section">
+    <section class="main-content">
+        <article class="aboutus">
+        <!-- Content Header -->
+        <div>
+            <h1>About Us</h1>
+            <figure>
+            <img src="../images/beachPeople.jpg" alt="About Us Illustration" />
+            </figure>
+        </div>
+        <header>
+            
+        </header>
+        
+        <div>
+            <p>
+            Subic Bay Venezia Hotel is conveniently located in the heart of the Central Business District Area of the Freeport and is near to numerous shopping malls, duty free shops, entertainment zones, recreational areas, popular tourist destinations, restaurants and beach resorts.
+            The hotel's selling point is the way it approaches the market. By putting customers first and giving them good value for their money, Subic Bay Venezia Hotel is able to lure a sizeable clientele and some loyal followers away from other more established hotels in Subic Bay.
+        </p>
+        <h2>Brief History</h2>
+        <p>
+            The tourism industry of Subic, Zambales, 
+            is a classic tale of successful military base conversion. 
+            Subic tourism transformed overnight in 1992, pivoting from one of the 
+            largest U.S. naval installations in the world into a premier eco-tourism and 
+            investment destination. Driven by a mix of geographic luck, historic preservation, 
+            and community resilience, the area evolved from a highly restricted military stronghold 
+            into a bustling, diverse vacation hotspot. 
+        </p>
+        <p>
+            The foundations of Subic's tourism actually lie in its deeply rooted military history. 
+            Recognizing the strategic value of Subic Bay's deep waters and natural mountain barriers, 
+            the Spanish colonial government established a naval fortress and arsenal here in 1885, 
+            leaving behind enduring landmarks like the iconic Spanish Gate. Following the Spanish-American War, 
+            the United States took control in 1901, eventually expanding the site into the massive U.S. Naval Base 
+            Subic Bay. For nearly a century, the base functioned as a restricted, American-style city-within-a-city. 
+            While the surrounding municipality of Olongapo grew rapidly to service the rest-and-recreation needs of visiting sailors, the pristine 
+            rainforests and naval infrastructure within the base lines remained strictly guarded and closed to the general public. 
+        </p>
+        <p>The turning point for Subic arrived in 1991, triggered by the catastrophic eruption of 
+            nearby Mount Pinatubo and the Philippine Senate's subsequent vote to reject the extension of 
+            the U.S. military bases agreement. When the American forces officially lowered their flag and 
+            withdrew in November 1992, the region faced immediate economic devastation. 
+            To avert disaster, the Philippine government established the Subic Bay Metropolitan 
+            Authority (SBMA) under the leadership of Richard Gordon. Armed with a legendary 
+            force of 8,000 local volunteers, the community protected billions of dollars worth of abandoned 
+            American infrastructure from looting, setting the stage for an unprecedented commercial rebirth.
+        </p>
+        <p>
+            Instead of dismantling the former base, the SBMA repurposed its exceptional infrastructure into 
+            the Subic Bay Freeport Zone, aggressively marketing its unique blend of well-maintained American 
+            facilities and untouched natural landscapes. Because the military had strictly protected the area 
+            for decades, Subic possessed rare, old-growth rainforests and thriving marine life. 
+        </p>
+        <p>
+            By the mid-1990s, former military structures and secure zones were creatively transformed into pioneering eco-tourism attractions. Ocean Adventure became Southeast Asia’s first open-water marine park, while the surrounding jungles became home to survival training camps and wildlife sanctuaries like Zoobic Safari. 
+            In the decades that followed, Subic tourism successfully diversified far beyond basic sightseeing. The base's excellent road networks, deep harbor, and sports facilities allowed the Freeport to transform into a premier destination for corporate conventions, international triathlons, sailing regattas, and extreme sports. Today, Subic stands as a global masterclass in economic resilience, seamlessly blending its multi-layered military heritage, duty-free shopping, modern seaside resorts, and protected natural wonders into one of the country's most reliable travel destinations.
+        </p>
+        </div>
+    </article>
+    </section>
+    
+    <aside class="sidebar">
+        <!-- BOOKING FORM -->
+        <section class="reqBooking" aria-label="Request Booking">
+        <!-- FORM HEADER -->
+        <h2>REQUEST BOOKING</h2>
+        
+        <!-- FORM BODY-->
+        <form>
+            <label for="name">Your Name</label>
+            <input id="name" type="text">
+
+            <label for="destination">Your Destination</label>
+            <input id="destination" type="text">
+
+            <label for="arrival">Date of Arrival</label>
+            <input id="arrival" type="date">
+
+            <label for="departure">Date of Departure</label>
+            <input id="departure" type="date">
+            
+            <!-- Grouped Nested Form -->
+            <fieldset>
+            <legend>No. of Persons:</legend>
+            <label for="adults" class="sr-only">Adults</label>
+            <input type="number" id="adults" name="adults" placeholder="Adults" min="1">
+                        
+            <label for="children" class="sr-only">Children</label>
+            <input type="number" id="children" name="children" placeholder="Children" min="0">
+            </fieldset>
+            
+            <!-- Dropdown Menu/Choices -->
+            <label for="prefContact">Preferred Contact</label>
+            <select name="prefContact" id="prefContact">
+            <option value="" disabled selected>Preferred Contact</option>
+            <option value="online">Email</option>
+            <option value="in-person">Phone Number</option>
+            </select>
+            <button class="submitBtn" type="submit"><a>Submit</a></button>
+        </form>
+        </section>
+
+        <!-- ADS -->
+        <section class="advertisements" aria-label="Advertisements">
+        <div class="advert" role="banner"><img src="../images/ad1.jpg" alt="Ads #1"></div>
+        <div class="advert" role="banner"><img src="../images/ad2.jpg" alt="Ads #2"></div>
+        <div class="advert" role="banner"><img src="../images/ad3.jpg" alt="Ads #3"></div>
+        </section>
+    </aside> 
+    </section>
+@endsection
